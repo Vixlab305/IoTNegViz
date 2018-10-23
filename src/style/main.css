@@ -1,0 +1,204 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  margin: 0px;
+}
+
+.d3-tip {
+  pointer-events: none;
+  background-color: white;
+  border: black;
+  border-radius: 10px;
+}
+.d3-tip .headertip {
+  text-align: center;
+  width: 100%;
+}
+.d3-tip .headertip .headerterm {
+  color: #76777d;
+}
+.d3-tip h3, .d3-tip h4, .d3-tip h5 {
+  display: inline-block;
+  margin: auto;
+}
+.d3-tip h5 {
+  padding-left: 20px;
+}
+.d3-tip table {
+  font-size: small;
+  border-radius: 10px;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+.d3-tip table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.d3-tip table th {
+  background-color: #001831;
+  color: white;
+}
+.d3-tip table th, .d3-tip table td {
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding: 5px;
+}
+.d3-tip table .information {
+  font: 120% Helvetica, sans-serif;
+  padding: 10px;
+  background-color: #ffc62a;
+  color: #000000;
+}
+
+.tick text {
+  font: 120% Helvetica, sans-serif;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+.grid line {
+  stroke-width: 0.2;
+  stroke-opacity: 1;
+  color: black;
+}
+
+@keyframes spinner-line-fade-more {
+  0%, 100% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+}
+@keyframes spinner-line-fade-quick {
+  0%, 39%, 100% {
+    opacity: 0.25;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+@keyframes spinner-line-fade-default {
+  0%, 100% {
+    opacity: 0.22;
+  }
+  1% {
+    opacity: 1;
+  }
+}
+.autocomplete {
+  width: 300px;
+  position: relative;
+  display: inline-block;
+  padding: 10px 10px;
+  margin: auto;
+  border: none;
+  vertical-align: middle;
+}
+.autocomplete #theWord {
+  width: 100%;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+.autocomplete-items div:hover ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+.autocomplete-items div:hover ::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.autocomplete-items div:hover ::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #7a99d9), color-stop(0.72, #497dbd), color-stop(0.86, #1c3a94));
+}
+
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+#searchdiv {
+  display: inline-block;
+}
+
+#navbar {
+  background-color: #333;
+  line-height: 20px;
+}
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#navbar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+}
+
+.btn {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  font-size: 8px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.setting {
+  vertical-align: middle;
+  float: right;
+  line-height: 38px;
+  color: white;
+  padding-right: 10px;
+}
+
+.sticky + .timeline {
+  padding-top: 47px;
+}
+
+/*# sourceMappingURL=main.css.map */
