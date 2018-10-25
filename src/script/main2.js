@@ -903,8 +903,8 @@ function blacklist(data){
     for ( k in categoriesgroup)
         categoriesgroup[k].forEach(kk=> categoriesmap[kk]= k);
     // var blackw =["cnbc","CNBC","U.S.","reuters","Reuters","CNBC.com","EU","U.S"];
-    //var blackw =["iot","risk"];
-    var blackw =[];
+    var blackw =["iot","risk","globalcityforum2018"];
+    // var blackw =[];
     termscollection_org =[];
     data.forEach(d=>{
         d.keywords.filter(w => {

@@ -17,7 +17,7 @@ body {
 .d3-tip .headertip .headerterm {
   color: #76777d;
 }
-.d3-tip h3, .d3-tip h4, .d3-tip h5 {
+.d3-tip h3, .d3-tip h4, .d3-tip h5, .d3-tip h6 {
   display: inline-block;
   margin: auto;
 }
@@ -88,11 +88,6 @@ body {
 }
 .autocomplete {
   width: 300px;
-  position: relative;
-  display: inline-block;
-  padding: 10px 10px;
-  margin: auto;
-  border: none;
   vertical-align: middle;
 }
 .autocomplete #theWord {
@@ -140,10 +135,6 @@ body {
   color: #ffffff;
 }
 
-#searchdiv {
-  display: inline-block;
-}
-
 #navbar {
   background-color: #333;
   line-height: 20px;
@@ -153,7 +144,7 @@ body {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 22px 40px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -164,13 +155,6 @@ body {
 #navbar a.active {
   background-color: #4CAF50;
   color: white;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding-top: 5px;
 }
 
 .header {
@@ -199,6 +183,76 @@ body {
 
 .sticky + .timeline {
   padding-top: 47px;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+nav ul li.active {
+  background-color: #3d8edd;
+}
+h1 {
+  text-align: center;
+  display: block;
+  font-size: 2.3em;
+  margin: 0.67em 0;
+  font-weight: bold;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1.3em;
+}
+.ip {
+    /*display: block;*/
+    font-size: 1.1em;
+
+}
+ul.o {
+    list-style-type: circle;
+}
+.usecase {
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+#searchbtn {
+  color: white;
+}
+
+#searchbtn:hover {
+  background-color: #ad4141;
+}
+
+#autocomplete-input {
+  color: #ededed;
+    width: 300px;
+}
+
+#autocomplete-input:focus {
+  color: #ffffff;
+}
+
+#autocomplete-input:focus {
+  border-bottom: 1px solid #ffffff;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+#slide-out {
+  width: 700px;
+  height: 700px;
+  padding: 5px;
+  overflow: hidden;
+  top: calc(50% - 700px /2);
+  cursor: move;
+  fill: none;
+  pointer-events: all;
 }
 
 /*# sourceMappingURL=main.css.map */

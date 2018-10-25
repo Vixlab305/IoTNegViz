@@ -1,5 +1,7 @@
 $font-stack:    Helvetica, sans-serif
 $primary-color: #333
+$sizenet: 700px
+
 
 body
   font: 100% $font-stack
@@ -20,7 +22,7 @@ body
     .headerterm
       color: #76777d
 
-  h3, h4, h5
+  h3, h4, h5,h6
     display: inline-block
     margin: auto
 
@@ -90,11 +92,7 @@ body
 
 .autocomplete
   width: 300px
-  position: relative
-  display: inline-block
-  padding: 10px 10px
-  margin: auto
-  border: none
+
   vertical-align: middle
 
 
@@ -144,8 +142,8 @@ body
   background-color: DodgerBlue !important
   color: #ffffff
 
-#searchdiv
-  display: inline-block
+//#searchdiv
+//  display: inline-block
 
 #navbar
   background-color: #333
@@ -165,11 +163,11 @@ body
   a.active
     background-color: #4CAF50
     color: white
-.sticky
-  position: fixed
-  top: 0
-  width: 100%
-  padding-top: 5px
+//.sticky
+//  position: fixed
+//  top: 0
+//  width: 100%
+//  padding-top: 5px
 
 .header
   background-color: #f1f1f1
@@ -194,3 +192,41 @@ body
 
 .sticky + .timeline
   padding-top: 47px
+
+.centered
+  position: fixed
+  top: 50%
+  left: 50%
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%)
+
+nav ul li.active
+  background-color: #3d8edd
+
+#searchbtn
+  color: white
+
+#searchbtn:hover
+  background-color: #ad4141
+
+#autocomplete-input
+  color: #ededed
+
+#autocomplete-input:focus
+  color: #ffffff
+
+#autocomplete-input:focus
+   border-bottom: 1px solid #ffffff
+   box-shadow: 0 1px 0 0 #000
+
+#slide-out
+  width: $sizenet
+  height: $sizenet
+  padding: 5px
+  overflow: hidden
+  top: calc(50% - #{$sizenet} /2)
+  cursor: move
+  fill: none
+  pointer-events: all
+
+

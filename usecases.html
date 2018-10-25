@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoTNegViz</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="src/style/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="lib/d3.layout.wordstream.js"></script>
+    <script src="lib/d3-tip.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.0.1/spin.min.js'></script>
+
+</head>
+<body>
+<h1>IoTNegViz: An interactive tool for visualizing negative aspects of IoT </h1>
+<div>
+    <nav id="navbar">
+        <div class="nav-wrapper">
+            <ul class="brand-logo center">
+                <li><a href="usecases.html">Use cases</a></li>
+                <li><a href="index.html">Demo</a></li>
+            </ul>
+
+        </div>
+    </nav>
+</div>
+<div class="usecase">
+    <h3>1. Visual components</h3>
+
+    We have shown the main components of <b>IoTNegViz</b> in our submitted manuscripts. Due to the limit of space for
+    presentation, the details can be found here. The following figures shows main components of <b>IoTNegViz</b>: A)
+    The Utility component, B) The Topics stream, and C) The Dynamic network. Each negative aspect is represented by a
+    term in these visualization.<br><br>
+
+
+    <li><b> Box A - Utility component:</b>
+
+        <br> &nbsp;&nbsp;&nbsp;&nbsp; ◦ Search toolbox offers autocomplete search suggestions listed below<br>
+        &nbsp;&nbsp;&nbsp;&nbsp; ◦ <b>Use cases</b> page shows the findings of the visualization and details
+        for visual components.
+        <b>Demo</b> page illustrates a demonstration with interactive tool of <b>IoTNegViz</b>.
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp; ◦ Display mode is default to present data by day. The <b>Weekly</b>
+        and <b>Stack</b> options can be both choosen at the same time. The <b>Weekly</b> option is for
+        displaying by week instead of day as default, and the <b>Stack</b> option is for stacking layers on top of each
+        other.
+        <br><br>
+    </li>
+
+    </li>
+    <li><b> Box B - An area among the topic stream:</b> Along with the timeline in the upper part of the
+        screen, there are two streams in this visualization: The
+        orange layer is for accidents that refer to the negative aspects, and the blue one is for the potential
+        risks may occur. The shape of the stream directly associates with the stream’s thickness, which indicates the
+        total frequency of the inside terms.
+        The significance of each word is constructed based on its frequency, then emphasized in the visualization by its
+        size and color opacity.<br><br>
+
+    <li><b>Button C and Box C - The Dynamic Network:</b> When users click on the button, a dynamic graph
+        slides out. This is a force directed graph showing the connection and relationship between the negative
+        aspects. A term is considered significant if it has multiple connections with other items. <br><br>
+
+
+        <div style="text-align: center;margin-left: 5em;margin-right: 5em"><img src="src/img/compo.png"
+                                                                                width="80%"/><img
+                src="src/img/boxc.png" width="80%"/></div>
+
+        <!--===================================================-->
+        <h3>2. Terms in trending</h3>
+        When a term is moused over, the term is highlighted along with its corresponding terms in the same stream. A
+        detail box for tooltip pops up with the information: Term, date and frequency at that date. In the figure below,
+        <span style="color:#2077b5">cybersecurity</span> is highlighted:<br><br>
+    <li><b>Vertically:</b> The related terms with <span style="color:#2077b5">cybersecurity</span> in the same
+        day (Feb 28, 2018) are also emphasized, such as <span style="color:#2077b5">analytics</span>, <span
+                style="color:#2077b5">ai</span> (Artificial Intelligence), <span style="color:#2077b5">bigdata
+    </span>, and <span
+                style="color:#2077b5">sensors</span>. Based on this presentation, users can capture the topic derived
+        from these relevant terms.
+    </li>
+
+    <li><b>Horizontally:</b> All the other <span style="color:#2077b5">cybersecurity</span> terms in the same
+        stream are featured. From this illustration, users can see how often a term is mentioned throughout the
+        timeline, and its significance in each time step.
+    </li>
+    <br><br>
+
+    <div style="text-align: center;margin-left: 5em;margin-right: 5em"><img src="src/img/cyber.png" width="80%"/></div>
+
+    <br><br>In the dynamic graph below, the more connection a node has, the more significant that term is. The terms
+    in red boxes are some of the most important ones due to their big amount of connections, depicting the various
+    relationships they have with other nodes in the same domain. They are <span
+        style="color:#d13a20">cybersecurity</span>, <span
+        style="color:#d13a20">ai</span>, <span style="color:#d13a20">iiot</span>
+    (Industrial Internet of Things), <span style="color:#d13a20">gdpr</span> (General Data Protection Regulation), and
+    <span style="color:#d13a20">ddos</span> (Distributed Denial of Service).<br><br>
+    The orange box shows the concerns related to the accidents that happened regrading to IoT: <span
+        style="color:#f08c55">autonomousvehicles</span>, <span style="color:#f08c55">
+    crash</span>, <span style="color:#f08c55">accident</span> and <span style="color:#f08c55">
+    safety</span>. This also present the importance of raising awareness about the downsides of a cyber physical
+    system.<br><br>
+
+    <div style="text-align: center;margin-left: 5em;margin-right: 5em"><img src="src/img/gorce.png" width="80%"/>
+    </div>
+
+    <h3>3. Groups of co-occurrence terms</h3>
+    The figure below shows two groups of co-occurrence terms, indicated by two group colors: green and red. The
+    co-occurrence depicts that these terms are relevant to each others, and there is an above-chance frequency based
+    on the relationships among them.
+    <br><br>
+    The group denoted by green boxes presents the co-occurrences of <span style="color:#f08c55">accident</span>,
+    <span style="color:#f08c55">travelalert</span> and <span style="color:#f08c55">crash</span>.
+    <br><br>
+    The group denoted by red boxes presents the co-occurrences of <span style="color:#2077b5">cybersecurity</span>,
+    <span style="color:#2077b5">vulnerability</span>, and <span style="color:#2077b5">privacy</span> <br><br><br>
+    <div style="text-align: center;margin-left: 5em;margin-right: 5em"><img src="src/img/group.png" width="80%"/></div>
+</div>
+</body>

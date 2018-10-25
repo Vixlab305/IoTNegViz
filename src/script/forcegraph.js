@@ -6,7 +6,7 @@ function forcegraph() {
     var graph = {nodes: [], links: []};
     datalinkcalculate();
     var color = d3.scaleOrdinal(d3.schemeCategory10);
-    var thickscale = d3.scaleLinear().domain(d3.extent(graph.links,d=>d.value)).range([1,5]);
+    var thickscale = d3.scaleLinear().domain(d3.extent(graph.links,d=>d.value)).range([1,10]);
     var simulation = d3.forceSimulation()
         .force("link", d3.forceLink().id(function (d) {
             return d.id;
