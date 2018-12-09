@@ -1,3 +1,3 @@
 # IoTNegViz
 
-https://vixlab305.github.io/IoTNegViz/index.html
+https://vixlab305.github.io/IoTNegViz/
